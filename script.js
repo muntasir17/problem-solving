@@ -1,5 +1,13 @@
-const numbers = [1, 2, 3, 4, 5];
-console.log(numbers.reverse());
+let isAnagram = ["listen", "silent"];
+
+let check1 = isAnagram[0].split("").sort().join("");
+let check2 = isAnagram[1].split("").sort().join("");
+
+console.log(check1);
+console.log(check2);
+
+
+
 
 
 
