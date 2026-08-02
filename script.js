@@ -1,5 +1,5 @@
-let num = 35;
-let num2 = num + 5;
-
+const numbers = [15, 42, 8, 99, 23, 67];
+let findingBigNum = numbers.find(p => p >= 99)
+console.log(findingBigNum);
 
 
