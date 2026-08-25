@@ -1,20 +1,14 @@
 
-// total user number bair kora 
-const users = [
-  { name: "Arian", isActive: true },
-  { name: "Siam", isActive: false },
-  { name: "Nayeem", isActive: true },
-  { name: "Fahim", isActive: true },
-  { name: "Tanvir", isActive: false }
+const cart = [
+  { item: "Pen", price: 10, quantity: 3 },
+  { item: "Notebook", price: 50, quantity: 2 },
+  { item: "Eraser", price: 5, quantity: 4 }
 ];
-let count = 0;
-users.map((user)=>{
-    if(user.isActive === true){
-        count++;
-    }
+let sum = 0;
+cart.map((cartItem) =>{
+let totalPrice = cartItem.price * cartItem.quantity
+sum += totalPrice
 })
-console.log("Total Active Users : " + count);
-
-// ai nao ami bair kore dilam and tomar output gula o bair hoise akn tumi amk bolte parba nah je aita airokom hobe nah onno bhave hobe hen ten aigula amr kaj hocce bair kora aita jairokom bhave hok. jodi amr problem thik hoye thake tahole amk one line e akta verdict diye next problem diba. 
+console.log("Total Bill: " + sum);
 
 
