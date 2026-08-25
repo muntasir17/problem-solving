@@ -1,14 +1,16 @@
-
-const cart = [
-  { item: "Pen", price: 10, quantity: 3 },
-  { item: "Notebook", price: 50, quantity: 2 },
-  { item: "Eraser", price: 5, quantity: 4 }
+const products = [
+  { name: "Laptop", category: "Electronics" },
+  { name: "Shirt", category: "Clothing" },
+  { name: "Headphone", category: "Electronics" },
+  { name: "Book", category: "Education" },
+  { name: "Smartwatch", category: "Electronics" }
 ];
-let sum = 0;
-cart.map((cartItem) =>{
-let totalPrice = cartItem.price * cartItem.quantity
-sum += totalPrice
+
+products.map((cat) =>{
+if(cat.category === "Electronics"){
+    console.log(cat.name);
+}
 })
-console.log("Total Bill: " + sum);
+// ai nao ami bair kore dilam and tomar output gula o bair hoise akn tumi amk bolte parba nah je aita airokom hobe nah onno bhave hobe hen ten aigula amr kaj hocce bair kora aita jairokom bhave hok. jodi amr problem thik hoye thake tahole amk one line e akta verdict diye next problem diba. 
 
 
