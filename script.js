@@ -1,18 +1,20 @@
-//নিচে কিছু ভিডিওর তালিকা দেওয়া আছে। তোমার কাজ হলো—যেসব ভিডিও দেখা শেষ হয়েছে (isCompleted === true), সেগুলোর মোট সময় (durationMinutes) যোগ করে কনসোলে প্রিন্ট করা।
-const videos = [
-  { title: "JS Basics", durationMinutes: 15, isCompleted: true },
-  { title: "HTML Forms", durationMinutes: 10, isCompleted: false },
-  { title: "CSS Flexbox", durationMinutes: 25, isCompleted: true },
-  { title: "Git Basics", durationMinutes: 20, isCompleted: false }
+//নিচে কিছু অনলাইন অর্ডারের তালিকা দেওয়া আছে। তোমার কাজ হলো—যেসব অর্ডারের মোট অ্যামাউন্ট ১,০০০ টাকা বা তার বেশি (totalAmount >= 1000), সেগুলোর ID কনসোলে প্রিন্ট করা।
+
+const orders = [
+  { id: "ORD01", totalAmount: 1500 },
+  { id: "ORD02", totalAmount: 800 },
+  { id: "ORD03", totalAmount: 2200 },
+  { id: "ORD04", totalAmount: 450 }
 ];
 
-let totalTime = 0;
-videos.filter((video) =>{
-    if(video.isCompleted === true){
-        totalTime += video.durationMinutes;
+orders.filter((item)=>{
+    if(item.totalAmount >= 1000){
+        console.log(item.id);
+        
     }
 })
-console.log(`Total Completed Watch Time: ${totalTime}`);
+
+
 
 
 
