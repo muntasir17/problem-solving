@@ -1,15 +1,13 @@
-//নিচে কিছু কোর্সের নামের তালিকা দেওয়া আছে। তোমার কাজ হলো—যেসব কোর্সের দাম ১,০০০ টাকা থেকে ৪,০০০ টাকার মধ্যে (price >= 1000 এবং price <= 4000), সেগুলোর টাইটেল (title) কনসোলে প্রিন্ট করা
-
-const courses = [
-  { title: "HTML & CSS", price: 500 },
-  { title: "JavaScript", price: 1500 },
-  { title: "React JS", price: 3500 },
-  { title: "Data Science", price: 8000 }
+//নিচে একটি টিমের মেম্বারদের লিস্ট দেওয়া আছে। তোমার কাজ হলো—যেসব মেম্বারের রোল "Admin" এবং তারা বর্তমানে অ্যাক্টিভও আছে (isActive === true), শুধু সেগুলোর নাম (name) কনসোলে প্রিন্ট করা।
+const teamMembers = [
+  { name: "Siam", role: "Admin", isActive: true },
+  { name: "Rakib", role: "User", isActive: true },
+  { name: "Tanvir", role: "Admin", isActive: false },
+  { name: "Fahim", role: "Admin", isActive: true }
 ];
-
-courses.filter((course)=>{
-    if(course.price >= 1000 && course.price <= 4000){
-        console.log(course.title);
+teamMembers.filter((member)=>{
+    if(member.role === "Admin" && member.isActive === true){
+        console.log(member.name);
     }
 })
 //ai nao ami bair kore dilam and tomar output gula o bair hoise akn tumi amk bolte parba nah je aita airokom hobe nah onno bhave hobe hen ten aigula amr kaj hocce bair kora aita jairokom bhave hok. jodi amr problem thik hoye thake tahole amk one line e akta verdict diye next problem diba.
