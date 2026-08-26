@@ -1,19 +1,18 @@
-//নিচে কিছু শিক্ষার্থীর পরীক্ষার রেজাল্ট দেওয়া আছে। তোমার কাজ হলো—যেসব শিক্ষার্থী পাস করেছে (hasPassed === true), তাদের স্কোরের সাথে ৫ বোনাস পয়েন্ট যোগ করে নাম ও ফাইনাল স্কোর কনসোলে প্রিন্ট করা।
-const students = [
-  { name: "Rahim", score: 80, hasPassed: true },
-  { name: "Karim", score: 45, hasPassed: false },
-  { name: "Arian", score: 90, hasPassed: true }
+//নিচে কিছু ভিডিওর তালিকা দেওয়া আছে। তোমার কাজ হলো—যেসব ভিডিও দেখা শেষ হয়েছে (isCompleted === true), সেগুলোর মোট সময় (durationMinutes) যোগ করে কনসোলে প্রিন্ট করা।
+const videos = [
+  { title: "JS Basics", durationMinutes: 15, isCompleted: true },
+  { title: "HTML Forms", durationMinutes: 10, isCompleted: false },
+  { title: "CSS Flexbox", durationMinutes: 25, isCompleted: true },
+  { title: "Git Basics", durationMinutes: 20, isCompleted: false }
 ];
 
-students.filter((number)=>{
-if(number.hasPassed === true){
-    console.log(`${number.name} - Final Score : ${number.score + 5}`);
-    
-}
-
-
+let totalTime = 0;
+videos.filter((video) =>{
+    if(video.isCompleted === true){
+        totalTime += video.durationMinutes;
+    }
 })
-
+console.log(`Total Completed Watch Time: ${totalTime}`);
 
 
 
