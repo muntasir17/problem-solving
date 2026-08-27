@@ -1,16 +1,18 @@
 
-const attendees = [
-  { name: "Tanvir", age: 22, hasTicket: true },
-  { name: "Nayeem", age: 16, hasTicket: true },
-  { name: "Fahim", age: 25, hasTicket: false },
-  { name: "Siam", age: 20, hasTicket: true }
+let sum = 0;
+const members = [
+  { name: "Shafiq", points: 150, isActive: true },
+  { name: "Rafiq", points: 200, isActive: false },
+  { name: "Habib", points: 300, isActive: true },
+  { name: "Jamil", points: 50, isActive: false }
 ];
 
-attendees.filter((student)=>{
-    if(student.age >= 18 && student.hasTicket === true){
-        console.log(student.name);
+members.filter((member)=>{
+    if(member.isActive === true){
+        sum += member.points
     }
 })
+console.log(`Total Active Points: ${sum}`);
 
 
 
