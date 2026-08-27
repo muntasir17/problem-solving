@@ -1,16 +1,20 @@
 
-const products = [
-  { name: "Laptop", category: "Electronics", inStock: true },
-  { name: "Shirt", category: "Clothing", inStock: true },
-  { name: "Headphones", category: "Electronics", inStock: false },
-  { name: "Smartphone", category: "Electronics", inStock: true }
+const attendees = [
+  { name: "Tanvir", age: 22, hasTicket: true },
+  { name: "Nayeem", age: 16, hasTicket: true },
+  { name: "Fahim", age: 25, hasTicket: false },
+  { name: "Siam", age: 20, hasTicket: true }
 ];
 
-products.filter((item)=>{
-    if(item.inStock === true && item.category === "Electronics"){
-        console.log(item.name);
+attendees.filter((student)=>{
+    if(student.age >= 18 && student.hasTicket === true){
+        console.log(student.name);
     }
 })
+
+
+
+
 
 //ai nao ami bair kore dilam and tomar output gula o bair hoise akn tumi amk bolte parba nah je aita airokom hobe nah onno bhave hobe hen ten aigula amr kaj hocce bair kora aita jairokom bhave hok. jodi amr problem thik hoye thake tahole amk one line e akta verdict diye next problem diba. 
 
