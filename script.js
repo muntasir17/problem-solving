@@ -1,16 +1,17 @@
 
-let sum = 0;
-const shipments = [
-  { id: "SHIP1", shippingFee: 120, status: "pending" },
-  { id: "SHIP2", shippingFee: 80, status: "delivered" },
-  { id: "SHIP3", shippingFee: 150, status: "pending" },
-  { id: "SHIP4", shippingFee: 50, status: "cancelled" }
+const employees = [
+  { name: "Anis", dept: "IT", salary: 50000, isBonusEligible: true },
+  { name: "Babul", dept: "HR", salary: 40000, isBonusEligible: true },
+  { name: "Champa", dept: "IT", salary: 60000, isBonusEligible: false },
+  { name: "Dalia", dept: "IT", salary: 55000, isBonusEligible: true }
 ];
-shipments.filter((item)=>{
-    if(item.status === "pending"){
-        sum += item.shippingFee
-    }
+
+employees.filter((employe)=>{
+if(employe.isBonusEligible === true && employe.dept === "IT"){
+console.log(`${employe.name} - Final Salary : ${employe.salary + 5000}`);
+}else if(employe.dept === "IT" && employe.isBonusEligible === false){
+console.log(`${employe.name} - Final Salary : ${employe.salary }`);
+}
 })
-console.log(`Total Pending Shipping Fee: ${sum}`);
 //ai nao ami bair kore dilam and tomar output gula o bair hoise akn tumi amk bolte parba nah je aita airokom hobe nah onno bhave hobe hen ten aigula amr kaj hocce bair kora aita jairokom bhave hok. jodi amr problem thik hoye thake tahole amk one line e akta verdict diye next problem diba. 
 
