@@ -1,17 +1,20 @@
-const orders = [
-  { orderId: "ORD-101", amount: 1200, status: "pending" },
-  { orderId: "ORD-102", amount: 3500, status: "shipped" },
-  { orderId: "ORD-103", amount: 800, status: "delivered" },
-  { orderId: "ORD-104", amount: 2100, status: "cancelled" }
+const user = { name: "Anik", role: "editor" };
+
+const menuItems = [
+  { title: "Dashboard", allowedRoles: ["admin", "editor", "user"] },
+  { title: "User Management", allowedRoles: ["admin"] },
+  { title: "Content Editor", allowedRoles: ["admin", "editor"] },
+  { title: "System Settings", allowedRoles: ["admin"] },
+  { title: "My Profile", allowedRoles: ["admin", "editor", "user"] }
 ];
-orders.filter((user)=>{
-if(user.status === "pending"){
-    console.log(`Order ${user.orderId} (${user.amount} Tk) | Status : Pending ⏳ |Action: [Cancel Order]`);
-}else if(user.status === "shipped"){
-  console.log(`Order ${user.orderId} (${user.amount} Tk) | Status : Shipped 🚚 |Action: [Track Shipment]`);
-}else if(user.status === "delivered"){
-  console.log(`Order ${user.orderId} (${user.amount} Tk) | Status : Delivered ✅ |Action: [Write Review]`);
-}else{
-console.log(`Order ${user.orderId} (${user.amount} Tk) | Status : Cancelled ❌ |Action: [Reorder]`);
+console.log(`Accessible Menus for ${user.name} (${user.role}):`);
+menuItems.map((item)=>{
+if(item.allowedRoles.includes(user.role) ){
+    console.log(`- ${item.title}`);
 }
 })
+
+
+
+
+
