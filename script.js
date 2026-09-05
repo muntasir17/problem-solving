@@ -1,32 +1,22 @@
-const cart = [
-  { name: "Mouse", price: 1000, quantity: 2 },
-  { name: "Keyboard", price: 3000, quantity: 1 },
-  { name: "Monitor", price: 20000, quantity: 2 }
-];
-let sum = 0;
-let total = 0;
-console.log(`Cart Summary:`);
+const customer = {
+  name: "Sumi",
+  totalSpent: 25000,
+  ordersCount: 6,
+  currentPurchase: 5000
+};
+console.log(`Customer : ${customer.name}`);
 
-cart.map((item)=>{
-  let result = item.price * item.quantity;
-  total += result
-  sum += item.quantity;
-})
-console.log(`- Subtotal: ${total} Tk`);
-console.log(`- Total Items: ${sum}`);
-
-if(total >= 40000){
-  let discount = (total * 5) / 100
-  console.log(`- Discount: ${discount} Tk (5%)`);
-  console.log(`- Final Payable: ${total - discount} Tk`); 
+if(customer.totalSpent >= 50000 || customer.ordersCount >= 10){
+console.log(`Loyalty Rank: VIP`);
+}else if(customer.totalSpent >= 20000 && customer.ordersCount >= 5){
+console.log(`Loyalty Rank: Gold 🥇`);
+}else if(customer.totalSpent >= 5000){
+  console.log(`Loyalty Rank: Silver`);
 }else{
-  console.log(total);
+    console.log(`Loyalty Rank: Bronze`);
 }
+console.log(`Customer : ${customer.currentPurchase}`);
+let points = (customer.currentPurchase / 100) * 2;
+console.log(`Earned Points: ${points} Points (Double Bonus Applied!)`);
 
-if(sum >= 4){
-  console.log(`- Reward Status: Free Gift: USB Hub Included! 🎁`);
-}else{
-  console.log(`No Free Gift Eligible`);
-}
-
-// bro aita challenging chilo mane ami finally brain khatai kicu akta banailam and answer tomar moto kore bair korlam and aita te asa kori kono bhul nai ar akto bug thakle oita ami pore giye kaje solve kore felbo but akn kar moto ami parchi aita tomar mante hobe bhai. now ami ki next problem paite pari. 
+// bro aita teo matha khataite hoise that means aitao akta bhalo level er problem silo and ami asa korbo tumi aitao 100% parchi ai bheve dhore niba. and amk next problem diba. 
