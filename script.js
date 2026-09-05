@@ -1,29 +1,22 @@
-const checkoutData = {
-  cartSubtotal: 3200,
-  couponCode: "SAVE20",
-  userBalance: 3000
+const flashSaleItem = {
+  productName: "Wireless Earbuds",
+  originalPrice: 2000,
+  flashDiscountPercent: 30,
+  stockAvailable: 5,
+  userQuantity: 2,
+  isFlashSaleLive: true
 };
-console.log(`Checkout Details:`);
-console.log(`- Subtotal: ${checkoutData.cartSubtotal} Tk`);
-
-if(checkoutData.couponCode === "SAVE20"){
-let result = (checkoutData.cartSubtotal * 20) / 100;
-let finalPrice = checkoutData.cartSubtotal - result;
-console.log(`- Discount : ${result} Tk (${checkoutData.couponCode} applied)`);
-if(checkoutData.userBalance >= finalPrice){
-  console.log(`- Payment Status: Order Placed Successfully! ✅`);
+if(flashSaleItem.userQuantity > flashSaleItem.stockAvailable){
+  console.log(`Order Failed: Only ${flashSaleItem.stockAvailable} items left in stock!`);
+}else if(flashSaleItem.userQuantity > 2){
+  console.log(`Order Failed: Flash Sale limit is max 2 units per customer!`);
+}else {
+  if(flashSaleItem.isFlashSaleLive === true){
+    let result = (flashSaleItem.originalPrice * flashSaleItem.flashDiscountPercent) / 100;
+    let finalPrice = flashSaleItem.originalPrice - result;
+    console.log("Price : " + finalPrice  + " TK");
+  }else{
+    console.log("Price : " + flashSaleItem.originalPrice + "TK") ;
+  }
 }
-let remainingBalance = checkoutData.userBalance - finalPrice;
-console.log(`- Remaining Wallet Balance: ${remainingBalance} Tk`);
-}
-// aikhane ami - Shipping Fee: 0 Tk (Free Shipping) chara baki sob concept ami milay felsi asa kori. and aita oto important mone hocce nah. ami asol logic milay felsi and aita amr jonno enough ajke ato problem solve korlam ato happy ami every problem e ami onk kicu shiklam. thank you tomake amk airokom problem dewar jonno. amk ki arekta problem dewa jabe. 
-
-
-
-
-
-
-
-
-
-
+// aita perfectly kaj kortece jokon ami stock and userquantity change korchi. and jokon aigula abr ager moto rhaksi mane 3,4 e tokon tomar dewa output mane result oitai astechilo. amr ai code ta perfectly hoise bhai aita tumi ossikar korte parb nah i guess. 
