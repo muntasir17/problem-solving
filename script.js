@@ -1,17 +1,32 @@
-const products = [
-  { name: "Samsung Galaxy S23", category: "Electronics", price: 70000, inStock: true },
-  { name: "iPhone 15 Pro", category: "Electronics", price: 130000, inStock: false },
-  { name: "Wireless Mouse", category: "Accessories", price: 1500, inStock: true },
-  { name: "Mechanical Keyboard", category: "Accessories", price: 4500, inStock: true },
-  { name: "Xiaomi Redmi Note", category: "Electronics", price: 25000, inStock: true }
+const cart = [
+  { name: "Mouse", price: 1000, quantity: 2 },
+  { name: "Keyboard", price: 3000, quantity: 1 },
+  { name: "Monitor", price: 20000, quantity: 2 }
 ];
-console.log(`Matching Products:`);
-products.map((item)=>{
-if(item.category === "Electronics" && item.price <= 80000 && item.inStock === true){
-console.log(`- ${item.name} (Price: ${item.price} Tk)`);
-}
+let sum = 0;
+let total = 0;
+console.log(`Cart Summary:`);
+
+cart.map((item)=>{
+  let result = item.price * item.quantity;
+  total += result
+  sum += item.quantity;
 })
-// bro guess what i completed all the task and perfectly assigned. akn to ar bolte parba nah amr code e kono bhul ase. aita ami damn sure je 100% hoise. 
+console.log(`- Subtotal: ${total} Tk`);
+console.log(`- Total Items: ${sum}`);
 
+if(total >= 40000){
+  let discount = (total * 5) / 100
+  console.log(`- Discount: ${discount} Tk (5%)`);
+  console.log(`- Final Payable: ${total - discount} Tk`); 
+}else{
+  console.log(total);
+}
 
+if(sum >= 4){
+  console.log(`- Reward Status: Free Gift: USB Hub Included! 🎁`);
+}else{
+  console.log(`No Free Gift Eligible`);
+}
 
+// bro aita challenging chilo mane ami finally brain khatai kicu akta banailam and answer tomar moto kore bair korlam and aita te asa kori kono bhul nai ar akto bug thakle oita ami pore giye kaje solve kore felbo but akn kar moto ami parchi aita tomar mante hobe bhai. now ami ki next problem paite pari. 
