@@ -1,17 +1,20 @@
-const cart = [
-  { name: "T-Shirt", price: 300, quantity: 2 },
-  { name: "Jeans", price: 800, quantity: 1 },
-  { name: "Socks", price: 50, quantity: 4 }
+
+const users = [
+  { name: "Rahim", role: "admin", isActive: true },
+  { name: "Karim", role: "user", isActive: true },
+  { name: "Tanvir", role: "admin", isActive: false },
+  { name: "Sumi", role: "admin", isActive: true }
 ];
-let sum = 0;
-let discountPrice;
-cart.map((item)=>{
-let result = item.price * item.quantity;
-sum += result;
-let discount = (sum * 10) / 100;
-discountPrice = sum - discount;
+let arr = [];
+users.map((user)=>{
+    if(user.isActive === true && user.role === "admin"){
+       arr.push(user.name)
+    }
 })
-console.log(discountPrice);
+console.log(arr);
+
+
+
 
 
 
