@@ -1,17 +1,18 @@
-const products = [
-  { name: "Shirt", category: "Clothing" },
-  { name: "Laptop", category: "Electronics" },
-  { name: "Pants", category: "Clothing" },
-  { name: "Mobile", category: "Electronics" },
-  { name: "Book", category: "Stationery" }
+const reviews = [
+  { user: "Arik", rating: 5 },
+  { user: "Rahim", rating: 4 },
+  { user: "Sumi", rating: 5 },
+  { user: "Karim", rating: 2 }
 ];
-let arr = [];
-products.forEach((item)=>{
-if(!arr.includes(item.category)){
-  arr.push(item.category)
-}
+let sum = 0;
+reviews.forEach((item)=>{
+  sum += item.rating;
 })
-console.log(arr);
+let result = sum / 4;
+console.log(result);
+
+
+
 
 
 
