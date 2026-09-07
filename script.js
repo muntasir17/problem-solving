@@ -1,16 +1,12 @@
-const inventory = [
-  { name: "Keyboard", stock: 12 },
-  { name: "Mouse", stock: 3 },
-  { name: "Monitor", stock: 2 },
-  { name: "Headphone", stock: 8 }
-];
-let arr = []
-inventory.forEach((item)=>{
-  if(item.stock < 5){
-arr.push(item.name)
-  }
-})
-console.log(arr);
+const validCoupons = ["SAVE10", "SAVE20", "WELCOME50"];
+const inputCoupon = "SAVE20";
+
+if(validCoupons.includes(inputCoupon)){
+  console.log(`Discount Applied!`);
+}else{
+   console.log(`Invalid Coupon! !`);
+}
+
 
 
 
