@@ -1,12 +1,13 @@
-const validCoupons = ["SAVE10", "SAVE20", "WELCOME50"];
-const inputCoupon = "SAVE20";
-
-if(validCoupons.includes(inputCoupon)){
-  console.log(`Discount Applied!`);
-}else{
-   console.log(`Invalid Coupon! !`);
-}
-
+let totalQuantity = 0
+const cart = [
+  { name: "T-Shirt", price: 300, quantity: 2 },
+  { name: "Jeans", price: 800, quantity: 1 },
+  { name: "Socks", price: 50, quantity: 3 }
+];
+cart.forEach((item)=>{
+  totalQuantity += item.quantity
+})
+console.log(totalQuantity);
 
 
 
