@@ -1,18 +1,16 @@
-const reviews = [
-  { user: "Arik", rating: 5 },
-  { user: "Rahim", rating: 4 },
-  { user: "Sumi", rating: 5 },
-  { user: "Karim", rating: 2 }
+const inventory = [
+  { name: "Keyboard", stock: 12 },
+  { name: "Mouse", stock: 3 },
+  { name: "Monitor", stock: 2 },
+  { name: "Headphone", stock: 8 }
 ];
-let sum = 0;
-reviews.forEach((item)=>{
-  sum += item.rating;
+let arr = []
+inventory.forEach((item)=>{
+  if(item.stock < 5){
+arr.push(item.name)
+  }
 })
-let result = sum / 4;
-console.log(result);
-
-
-
+console.log(arr);
 
 
 
