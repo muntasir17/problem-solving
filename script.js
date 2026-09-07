@@ -1,20 +1,20 @@
-
-const users = [
-  { name: "Rahim", role: "admin", isActive: true },
-  { name: "Karim", role: "user", isActive: true },
-  { name: "Tanvir", role: "admin", isActive: false },
-  { name: "Sumi", role: "admin", isActive: true }
+const articles = [
+  { id: 1, title: "Learn JavaScript ES6", category: "Programming" },
+  { id: 2, title: "Mastering React Hooks", category: "Frontend" },
+  { id: 3, title: "JavaScript Array Methods", category: "Programming" },
+  { id: 4, title: "Tailwind CSS Tutorial", category: "Design" }
 ];
-let arr = [];
-users.map((user)=>{
-    if(user.isActive === true && user.role === "admin"){
-       arr.push(user.name)
-    }
+let arr = []
+const searchQuery = "javascript";
+let boroWord = searchQuery.toUpperCase()
+console.log(boroWord);
+
+articles.map((item)=>{
+  let titelWord = item.title.toUpperCase();
+  if(titelWord.includes(boroWord)){
+    arr.push(item.title)
+  }
 })
 console.log(arr);
-
-
-
-
 
 
