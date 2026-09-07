@@ -1,16 +1,12 @@
-const cart = [
-  { name: "Laptop Bag", price: 1500, quantity: 2 },
-  { name: "Mouse Pad", price: 300, quantity: 3 },
-  { name: "Water Bottle", price: 250, quantity: 1 }
+const products = [
+  { id: 101, name: "Smart Phone", price: 15000 },
+  { id: 102, name: "Laptop", price: 65000 },
+  { id: 103, name: "Smart Watch", price: 3500 }
 ];
-let arr = []
-cart.forEach((item)=>{
-arr.push({name : item.name , subtotal : item.price * item.quantity})
+
+const targetId = 102;
+products.forEach((item)=>{
+  if(item.id === targetId){
+    console.log(`{ id : ${item.id}, name : ${item.name}, price: ${item.price} }`);
+  }
 })
-console.log(arr);
-
-
-
-
-
-
