@@ -1,12 +1,17 @@
-const products = [
-  { id: 101, name: "Smart Phone", price: 15000 },
-  { id: 102, name: "Laptop", price: 65000 },
-  { id: 103, name: "Smart Watch", price: 3500 }
+const cart = [
+  { name: "Mouse", price: 500, inStock: true },
+  { name: "Keyboard", price: 1500, inStock: true },
+  { name: "Monitor", price: 12000, inStock: false }
 ];
-
-const targetId = 102;
-products.forEach((item)=>{
-  if(item.id === targetId){
-    console.log(`{ id : ${item.id}, name : ${item.name}, price: ${item.price} }`);
+cart.forEach((item)=>{
+  if(item.inStock === true){
+    console.log(`Order Ready!`);
+  }else{
+    console.log(`Cannot Place Order: Out of Stock Items Present!`);
   }
 })
+
+
+
+
+
