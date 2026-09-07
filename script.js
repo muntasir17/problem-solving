@@ -1,20 +1,17 @@
-const articles = [
-  { id: 1, title: "Learn JavaScript ES6", category: "Programming" },
-  { id: 2, title: "Mastering React Hooks", category: "Frontend" },
-  { id: 3, title: "JavaScript Array Methods", category: "Programming" },
-  { id: 4, title: "Tailwind CSS Tutorial", category: "Design" }
+const products = [
+  { name: "Shirt", category: "Clothing" },
+  { name: "Laptop", category: "Electronics" },
+  { name: "Pants", category: "Clothing" },
+  { name: "Mobile", category: "Electronics" },
+  { name: "Book", category: "Stationery" }
 ];
-let arr = []
-const searchQuery = "javascript";
-let boroWord = searchQuery.toUpperCase()
-console.log(boroWord);
-
-articles.map((item)=>{
-  let titelWord = item.title.toUpperCase();
-  if(titelWord.includes(boroWord)){
-    arr.push(item.title)
-  }
+let arr = [];
+products.forEach((item)=>{
+if(!arr.includes(item.category)){
+  arr.push(item.category)
+}
 })
 console.log(arr);
+
 
 
